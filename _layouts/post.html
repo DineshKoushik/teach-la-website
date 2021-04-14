@@ -98,6 +98,7 @@ Enjoyed the read? Share on social media! <br/>
     {% for post in site.posts %}
         {% if post.title == page.title %} <!--Skip the current page so its not recommended-->
             {% assign iterations = iterations | plus: 1 %}
+            
             {% continue %}
         {% endif %}
         {% if forloop.index >= iterations %} <!--Because Liquid thinks its MatLab and starts iterating at 1 smh-->
